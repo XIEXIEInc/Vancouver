@@ -1,0 +1,1118 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#b9222d">
+<meta name="description" content="温哥华 Vancouver，大事小事，随时联系。帮你找人、找资源、想办法。">
+<title>温哥华 Vancouver | 大事小事，随时联系</title>
+
+<style>
+:root {
+  --red: #c92732;
+  --red-dark: #a91f29;
+  --ink: #182331;
+  --muted: #687586;
+  --pale: #fff6f5;
+  --line: #eee3e2;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--white);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+}
+
+/* 导航栏 */
+
+header {
+  padding: 21px 0;
+  background: white;
+  border-bottom: 1px solid #f0eeee;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 850;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.logo .cn { color: var(--red); }
+.logo .dotcom { color: #394250; }
+
+.brand-name {
+  padding-left: 15px;
+  margin-left: 14px;
+  border-left: 1px solid #e9dada;
+  font-size: 13px;
+  color: var(--red);
+  font-weight: 500;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 14px;
+}
+
+.nav-right a:hover,
+.footer-links a:hover { color: var(--red); }
+
+/* 首页 */
+
+.hero {
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg,
+      rgba(255,255,255,.97) 0%,
+      rgba(255,255,255,.88) 38%,
+      rgba(255,255,255,.15) 100%),
+    url("image1.jpg") center 48% / cover no-repeat;
+}
+
+.hero-content {
+  padding: 65px 0;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: 1.6px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(42px, 5.5vw, 68px);
+  line-height: 1.18;
+  letter-spacing: -2px;
+  margin: 0 0 20px;
+  font-weight: 850;
+}
+
+h1 span { color: var(--red); }
+
+.hero-description {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #394655;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 27px;
+}
+
+.btn {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 99px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: .2s;
+}
+
+.btn-primary {
+  color: white;
+  background: var(--red);
+  box-shadow: 0 6px 18px #c9273225;
+}
+
+.btn-primary:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: white;
+  border: 1px solid #d9dce0;
+}
+
+.btn-secondary:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* 通用标题 */
+
+.section-label {
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 750;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: clamp(27px, 3vw, 36px);
+  line-height: 1.4;
+  letter-spacing: -.8px;
+  margin: 0 0 14px;
+}
+
+.section-description {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.95;
+  margin: 0;
+}
+
+/* 核心服务 */
+
+.services { padding: 58px 0 65px; }
+
+.services-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.service-card {
+  padding: 22px 12px;
+  text-align: center;
+  border-radius: 13px;
+  background: linear-gradient(180deg, #fff8f7, #fff);
+  border: 1px solid #f3e8e7;
+  transition: .2s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px #a91f2910;
+}
+
+.service-icon {
+  width: 49px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  background: var(--red);
+  color: white;
+  border-radius: 50%;
+  font-size: 23px;
+}
+
+.service-card h3 {
+  font-size: 17px;
+  margin: 0 0 9px;
+}
+
+.service-card p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* 常见需求 */
+
+.more-services {
+  padding: 65px 0;
+  background: #fff8f7;
+}
+
+.section-heading { margin-bottom: 28px; }
+
+.section-heading h2 { margin-bottom: 8px; }
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.quick-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 210px;
+  background: white;
+  border: 1px solid #f0e6e5;
+  border-radius: 14px;
+  padding: 22px;
+  transition: .2s;
+}
+
+.quick-card:hover {
+  border-color: #e7b8ba;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px #8c20200a;
+}
+
+.quick-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 12px;
+  background: #fff0ef;
+  color: var(--red);
+  margin-bottom: 17px;
+}
+
+.quick-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.quick-card h3 {
+  font-size: 17px;
+  margin: 0 0 9px;
+}
+
+.quick-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0 0 16px;
+}
+
+.quick-card .arrow {
+  color: var(--red);
+  font-size: 18px;
+  margin-top: auto;
+}
+
+/* 为什么选择我们 */
+
+.why {
+  padding: 65px 0;
+  background: white;
+}
+
+.why-heading {
+  margin-bottom: 32px;
+  max-width: 600px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.why-card {
+  padding: 15px 30px;
+  border-right: 1px solid #eee4e4;
+}
+
+.why-card:first-child { padding-left: 0; }
+
+.why-card:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.why-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--red);
+  margin-bottom: 15px;
+}
+
+.why-icon svg {
+  width: 42px;
+  height: 42px;
+}
+
+.why-card h3 {
+  font-size: 18px;
+  margin: 0 0 9px;
+}
+
+.why-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* 联系我们 */
+
+.contact {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #fff6f5, #fffafa);
+  border-top: 1px solid #f2e6e5;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.contact-list {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 8px 22px;
+  box-shadow: 0 12px 35px #5a17170a;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 17px 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-item + .contact-item {
+  border-top: 1px solid #f0e9e9;
+}
+
+.contact-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+}
+
+.contact-icon svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.whatsapp-icon { background: #25D366; }
+.wechat-icon { background: #09B83E; }
+.email-icon { background: var(--red); }
+
+.contact-item .details { min-width: 0; }
+
+.contact-item small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.contact-item strong {
+  font-size: 14px;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.contact-item .arrow {
+  margin-left: auto;
+  color: #8b96a3;
+  font-size: 23px;
+}
+
+/* 页脚 */
+
+footer {
+  color: white;
+  background: #b9222d;
+  padding: 28px 0 18px;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 22px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 850;
+}
+
+.footer-logo small {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 12px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 22px;
+  font-size: 13px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ffffff35;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 11px;
+  color: #ffffffc7;
+}
+
+@media (max-width: 850px) {
+  .nav { flex-wrap: wrap; }
+  .nav-right { gap: 16px; font-size: 13px; }
+  .brand-name { display: none; }
+
+  .hero {
+    min-height: 420px;
+    background-image:
+      linear-gradient(90deg,
+        rgba(255,255,255,.94),
+        rgba(255,255,255,.72)),
+      url("image1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .services-layout,
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .quick-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-links { flex-wrap: wrap; }
+}
+
+@media (max-width: 520px) {
+  .container { width: 92%; }
+  .logo { font-size: 23px; }
+
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .hero-content { padding: 55px 0; }
+
+  h1 {
+    font-size: 43px;
+    letter-spacing: -1.5px;
+  }
+
+  .service-grid { grid-template-columns: 1fr; }
+
+  .service-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 14px;
+    padding: 15px;
+  }
+
+  .service-icon {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .quick-grid { grid-template-columns: 1fr; }
+  .quick-card { min-height: auto; }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .why-card,
+  .why-card:first-child,
+  .why-card:last-child {
+    border-right: 0;
+    border-bottom: 1px solid #eee4e4;
+    padding: 0 0 22px;
+  }
+
+  .why-card:last-child { border-bottom: 0; }
+
+  .contact-list { padding: 8px 15px; }
+  .contact-item { gap: 12px; }
+  .contact-item strong { font-size: 13px; }
+
+  .footer-logo small {
+    display: block;
+    margin: 7px 0 0;
+  }
+}
+
+/* ===== 常见需求卡片：默认只显示图标和标题 ===== */
+.quick-card {
+  min-height: 0;
+  align-self: start;
+  overflow: hidden;
+  cursor: default;
+  transform: none;
+  transition:
+    background-color .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease,
+    padding .35s ease;
+}
+
+.quick-card .quick-detail {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    grid-template-rows .38s ease,
+    opacity .28s ease,
+    visibility 0s linear .38s;
+}
+
+.quick-card .quick-detail p {
+  min-height: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.quick-card h3 {
+  margin-bottom: 0;
+}
+
+
+/* 标题右侧箭头：收起时显示，展开时隐藏 */
+.quick-card h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.quick-heading-arrow {
+  display: inline-block;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--red);
+  font: inherit;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.quick-card.is-active .quick-heading-arrow {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .quick-card:hover .quick-heading-arrow,
+  .quick-card:focus-within .quick-heading-arrow {
+    display: none;
+  }
+}
+
+/* 展开状态：显示详细介绍 */
+.quick-card.is-active .quick-detail {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    grid-template-rows .38s ease,
+    opacity .28s ease,
+    visibility 0s;
+}
+
+.quick-card.is-active .quick-detail p {
+  margin-top: 9px;
+  margin-bottom: 2px;
+}
+
+/* 电脑：只在鼠标悬停或键盘聚焦时展开 */
+@media (hover: hover) and (pointer: fine) {
+  .quick-card:hover,
+  .quick-card:focus-within {
+    border-color: #e7b8ba;
+    box-shadow: 0 12px 25px #8c20200a;
+  }
+
+  .quick-card:hover .quick-detail,
+  .quick-card:focus-within .quick-detail {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+    transition:
+      grid-template-rows .38s ease,
+      opacity .28s ease,
+      visibility 0s;
+  }
+
+  .quick-card:hover .quick-detail p,
+  .quick-card:focus-within .quick-detail p {
+    margin-top: 9px;
+    margin-bottom: 2px;
+  }
+}
+
+/* 手机：卡片纵向排列，滚动到哪项就展开哪项 */
+@media (max-width: 520px) {
+  .quick-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .quick-card {
+    padding: 17px 18px;
+    min-height: 0;
+  }
+
+  .quick-card .quick-icon {
+    margin-bottom: 10px;
+  }
+
+  .quick-card h3 {
+    margin-bottom: 0;
+  }
+
+  .quick-card.is-active {
+    border-color: #e7b8ba;
+    box-shadow: 0 8px 22px #8c20200a;
+  }
+
+  .quick-card.is-active h3 {
+    margin-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quick-card,
+  .quick-card .quick-detail,
+  .quick-card .arrow {
+    transition: none !important;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">
+      <span class="cn">温哥华</span><span class="dotcom">.com</span>
+    </a>
+    <span class="brand-name">Vancouver At</span>
+    <nav class="nav-right">
+      <a href="#more-services">核心服务</a>
+      <a href="#more-services">常见需求</a>
+      <a href="#why">关于我们</a>
+      <a href="#contact">联系我们</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="eyebrow"></div>
+
+      <h1>在温哥华<br><span>有事找我</span></h1>
+
+      <p class="hero-description">
+        你遇到的事，我帮你想办法。
+        <br>租房、工作、生活琐事，
+        <br>不知道找谁，都可以来问问。
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">立即联系</a>
+        <a class="btn btn-secondary" href="#more-services">了解服务</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="more-services" id="more-services">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-label">我能帮你什么？</div>
+        <h2>生活工作 都能帮上忙</h2>
+        <p class="section-description">
+
+        </p>
+      </div>
+
+      <div class="quick-grid">
+        <div class="quick-card">
+          <div class="quick-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M3 10.5 12 3l9 7.5"/>
+              <path d="M5.5 9.5V21h13V9.5M9 21v-7h6v7"/>
+            </svg>
+          </div>
+          <h3>生活上的事<button type="button" class="quick-heading-arrow" aria-label="展开详情">→</button></h3>
+          <div class="quick-detail"><p>租房、搬家、交通、家政，以及日常生活中的各种需求。</p></div>
+        </div>
+
+        <div class="quick-card">
+          <div class="quick-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="7" width="18" height="14" rx="2"/>
+              <path d="M8 7V4h8v3M3 12h18M10 12v2h4v-2"/>
+            </svg>
+          </div>
+          <h3>工作上的事<button type="button" class="quick-heading-arrow" aria-label="展开详情">→</button></h3>
+          <div class="quick-detail"><p>求职信息、招聘需求、职业发展，以及寻找合适的人脉。</p></div>
+        </div>
+
+        <div class="quick-card">
+          <div class="quick-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="11" cy="11" r="7"/>
+              <path d="m16 16 5 5M8 11h6M11 8v6"/>
+            </svg>
+          </div>
+          <h3>找人、找资源<button type="button" class="quick-heading-arrow" aria-label="展开详情">→</button></h3>
+          <div class="quick-detail"><p>不知道去哪问、找不到合适的人？帮你寻找相关联系人和可用资源。</p></div>
+        </div>
+
+        <div class="quick-card">
+          <div class="quick-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/>
+              <path d="M12 8v5M12 17h.01"/>
+            </svg>
+          </div>
+          <h3>其他麻烦事<button type="button" class="quick-heading-arrow" aria-label="展开详情">→</button></h3>
+          <div class="quick-detail"><p>临时需求、突发情况及紧急资源查找。不确定能不能帮？先联系我，说说你的情况，一起想办法。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- 为什么选择我们 -->
+  <section class="why">
+    <div class="container">
+      <div class="why-heading">
+        <div class="section-label">为什么找我们？</div>
+        <h2>不只是提供信息</h2>
+        <h2>更帮你找到办法</h2>
+        <p class="section-description">
+
+        </p>
+      </div>
+
+      <div class="why-grid">
+
+        <article class="why-card">
+          <div class="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+          </div>
+          <h3>熟悉本地</h3>
+          <p>了解温哥华的生活环境与本地资源，帮你寻找合适的渠道，不用什么事都自己摸索。</p>
+        </article>
+
+        <article class="why-card">
+          <div class="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>值得信赖</h3>
+          <p>认真对待每一份需求，尽力提供实用、负责任的协助。</p>
+        </article>
+
+        <article class="why-card">
+          <div class="why-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>华人社区</h3>
+          <p>连接华人社区与本地资源，帮你寻找温哥华本地的信息、人脉和服务资源。</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contact" id="contact">
+    <div class="container contact-layout">
+      <div>
+        <div class="section-label">联系我们</div>
+        <h2>大事小事</h2>
+        <h2>随时联系</h2>
+        <p class="section-description">
+   
+         不用先想好该找谁，也不用担心问题太小。
+         
+        </p>
+                <p class="section-description">
+   
+      把你的需求告诉我，我们一起想办法。
+         
+        </p>
+       
+      </div>
+
+      <div class="contact-list">
+ <!-- WhatsApp 官方品牌图标 -->
+        <a class="contact-item"
+           href="https://wa.me/16725588899"
+           target="_blank" rel="noopener noreferrer">
+          <div class="contact-icon whatsapp-icon">
+            <svg viewBox="0 0 32 32" aria-label="WhatsApp Logo">
+              <path fill="currentColor" d="M16 3.2A12.3 12.3 0 0 0 5.5 22l-1.6 5.8 6-1.6A12.3 12.3 0 1 0 16 3.2Zm0 22.4c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.5.9.9-3.4-.2-.4A10.1 10.1 0 1 1 16 25.6Zm5.5-7.6c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3Z"/>
+            </svg>
+          </div>
+          <div class="details">
+            <small>WhatsApp（首选）</small>
+  
+            <strong>+1 672 558 8899</strong>
+          </div>
+          <span class="arrow">›</span>
+        </a>
+      <!-- 微信品牌文字标识 -->
+        <div class="contact-item">
+          <div class="contact-icon wechat-icon">
+            <svg viewBox="0 0 32 32" aria-label="WeChat Logo">
+              <path fill="currentColor" d="M13.1 4C6.7 4 2 8.2 2 13.4c0 2.9 1.6 5.5 4.2 7.2l-.9 3.2 3.8-1.9c1 .3 2.1.5 3.2.5-.3-.8-.4-1.6-.4-2.5 0-4.5 4.1-8.2 9.2-8.2h.9C20.8 7.2 17.2 4 13.1 4ZM9 12.2a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Zm8.2 0a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Z"/>
+              <path fill="currentColor" d="M30 20c0-4-3.9-7.2-8.7-7.2s-8.7 3.2-8.7 7.2 3.9 7.2 8.7 7.2c1 0 2-.2 2.9-.5l3.3 1.5-.8-2.7c2.1-1.3 3.3-3.3 3.3-5.5Zm-11.5-1.1a1.1 1.1 0 1 1 0-2.2 1.1 1.1 0 0 1 0 2.2Zm5.6 0a1.1 1.1 0 1 1 0-2.2 1.1 1.1 0 0 1 0 2.2Z"/>
+            </svg>
+          </div>
+          <div class="details">
+            <small>微信（非首选）</small>
+            <strong>VancouverAt</strong>
+          </div>
+          <span class="arrow">›</span>
+        </div>
+        <!-- 电话联系方式 -->
+        <a class="contact-item"
+           href="tel:+16725588899">
+          <div class="contact-icon email-icon">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 aria-label="Phone">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                19.79 19.79 0 0 1-8.63-3.07
+                19.5 19.5 0 0 1-6-6
+                19.79 19.79 0 0 1-3.07-8.67
+                A2 2 0 0 1 4.11 2h3
+                a2 2 0 0 1 2 1.72
+                c.12.96.36 1.9.7 2.8
+                a2 2 0 0 1-.45 2.11L8.09 9.91
+                a16 16 0 0 0 6 6l1.27-1.27
+                a2 2 0 0 1 2.11-.45
+                c.9.34 1.84.58 2.8.7
+                A2 2 0 0 1 22 16.92Z"/>
+            </svg>
+          </div>
+          <div class="details">
+            <small>电话</small>
+            <strong>672 558 8899</strong>
+          </div>
+          <span class="arrow">›</span>
+        </a>
+
+
+
+        <!-- Email 图标 -->
+        <a class="contact-item"
+           href="mailto:Vancouver@outlook.at">
+          <div class="contact-icon email-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                 aria-label="Email Logo">
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="m3 7 9 6 9-6"/>
+            </svg>
+          </div>
+          <div class="details">
+            <small>邮箱</small>
+            <strong>Vancouver@outlook.at</strong>
+          </div>
+          <span class="arrow">›</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">
+        温哥华.com
+        <small>大事小事 随时联系</small>
+      </div>
+      <nav class="footer-links">
+        <a href="#more-services">核心服务</a>
+        <a href="#more-services">常见需求</a>
+        <a href="#why">关于我们</a>
+        <a href="#contact">联系我们</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      © 2026 温哥华.com · Vancouver At. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const section = document.querySelector("#more-services");
+  if (!section) return;
+
+  const cards = Array.from(section.querySelectorAll(".quick-card"));
+  if (!cards.length) return;
+
+  const mobileQuery = window.matchMedia("(max-width: 520px), (hover: none) and (pointer: coarse)");
+  let cardObserver = null;
+  let sectionObserver = null;
+
+  function setActive(card) {
+    cards.forEach(function (item) {
+      item.classList.toggle("is-active", item === card);
+    });
+  }
+
+  function clearActive() {
+    cards.forEach(function (item) {
+      item.classList.remove("is-active");
+    });
+  }
+
+  // 点击标题右侧的箭头，也可以主动展开对应服务卡片。
+  cards.forEach(function (card) {
+    const arrow = card.querySelector(".quick-heading-arrow");
+    if (!arrow) return;
+    arrow.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      setActive(card);
+    });
+  });
+
+  function setupMobileBehavior() {
+    if (cardObserver) cardObserver.disconnect();
+    if (sectionObserver) sectionObserver.disconnect();
+    clearActive();
+
+    if (!mobileQuery.matches) return;
+
+    function updateActiveCard() {
+      const sectionRect = section.getBoundingClientRect();
+      const sectionVisible = sectionRect.bottom > 0 &&
+                             sectionRect.top < window.innerHeight;
+
+      if (!sectionVisible) {
+        clearActive();
+        return;
+      }
+
+      const viewportCenter = window.innerHeight * 0.48;
+      const candidates = cards.map(function (card) {
+        const rect = card.getBoundingClientRect();
+        const visibleHeight = Math.max(
+          0,
+          Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0)
+        );
+        return {
+          card: card,
+          visibleHeight: visibleHeight,
+          distance: Math.abs((rect.top + rect.bottom) / 2 - viewportCenter)
+        };
+      }).filter(function (item) {
+        return item.visibleHeight > 0;
+      });
+
+      if (!candidates.length) return;
+
+      candidates.sort(function (a, b) {
+        return a.distance - b.distance;
+      });
+
+      setActive(candidates[0].card);
+    }
+
+    cardObserver = new IntersectionObserver(updateActiveCard, {
+      threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+      rootMargin: "-8% 0px -8% 0px"
+    });
+
+    cards.forEach(function (card) {
+      cardObserver.observe(card);
+    });
+
+    sectionObserver = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        updateActiveCard();
+      } else {
+        clearActive();
+      }
+    }, { threshold: 0 });
+
+    sectionObserver.observe(section);
+  }
+
+  setupMobileBehavior();
+
+  if (mobileQuery.addEventListener) {
+    mobileQuery.addEventListener("change", setupMobileBehavior);
+  } else if (mobileQuery.addListener) {
+    mobileQuery.addListener(setupMobileBehavior);
+  }
+});
+</script>
+
+</body>
+</html>
