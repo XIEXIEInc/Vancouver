@@ -1019,10 +1019,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let cardObserver = null;
   let sectionObserver = null;
 
+  // 展开采用累积模式：新卡片展开时，不收起已经展开的卡片。
   function setActive(card) {
-    cards.forEach(function (item) {
-      item.classList.toggle("is-active", item === card);
-    });
+    card.classList.add("is-active");
   }
 
   function clearActive() {
@@ -1081,6 +1080,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return a.distance - b.distance;
       });
 
+      // 滚动经过的卡片逐个展开，已展开的卡片保持展开。
       setActive(candidates[0].card);
     }
 
